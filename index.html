@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEMRUSH Checker</title>
+  <meta name="description" content="Paste your wallet address and check if you are TemListed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="stage">
+    <header class="logo" aria-label="TEMRUSH Checker">
+      <h1><span class="tem">TEM</span><span class="rush">RUSH</span></h1>
+      <p class="sub">CHECKER</p>
+    </header>
+
+    <div class="checker">
+      <label class="field" for="wallet">
+        <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M4 5a2 2 0 0 0-2 2v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3H5.5A1.5 1.5 0 0 1 4 4.5V5Zm0 0h13a1 1 0 0 1 0 2H4V5Zm12.5 7.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+        </svg>
+        <input id="wallet" type="text" placeholder="0x... Paste your wallet address here"
+               autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" />
+      </label>
+      <p id="hint" class="hint" role="alert" aria-live="polite"></p>
+      <button id="check" class="btn" type="button">CHECK STATUS</button>
+    </div>
+  </main>
+
+  <div id="overlay" class="overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-text">
+      <button id="close" class="close" type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+      <img id="modal-img" class="modal-img" alt="" />
+      <p id="modal-text" class="modal-text"></p>
+      <button id="ok" class="btn" type="button">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
